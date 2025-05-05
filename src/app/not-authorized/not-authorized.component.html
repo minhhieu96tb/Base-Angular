@@ -1,0 +1,21 @@
+<div class="app-not-authorized">
+  <div class="authorized">
+    <div class="authorized-img">
+      <img src="/assets/images/Login deactivated.png" alt="">
+    </div>
+    <div class="authorized-content">
+      <div class="authorized-text">
+        <div class="authorized-error">
+          <h5>{{ messages?.title ? messages?.title : "Có lỗi xảy ra" }}</h5>
+          <p>{{messages?.message ? messages?.message : 'Vui lòng thử lại sau'}}</p>
+        </div>
+      </div>
+      <button class="authorized-button"
+        [routerLink]='["/authentication/logout"]'
+        [state]='{ local: true }'
+      >
+        Đăng nhập lại
+      </button>
+    </div>
+  </div>
+</div>
