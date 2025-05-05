@@ -1,0 +1,15 @@
+.notifications-container {
+    position: fixed !important;
+    right: 20px !important;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-flow: column wrap-reverse;
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    max-height: 100%;
+    z-index: 100000;
+  }

@@ -1,0 +1,42 @@
+<div class="group-radio-button d-flex" [style.width]="width">
+  <nz-radio-group
+      [style.display]="display"
+      [style.width]="widthGroup"
+      [(ngModel)]="valueDefault"
+      (ngModelChange)="handleOnChange($event)"
+  >
+      <label
+          class="label-radio-buton d-flex align-center"
+          *ngFor="let item of listButtonCheck"
+          style="flex-shrink: 0;"
+          [style]="style"
+          nz-radio-button
+          [nzValue]="item.value"
+          [ngClass]="{'active-radio-custom': item.value == valueDefault}">
+          <div class="d-flex align-center justify-center" [ngStyle]="item.id === 'live' ? {'background-color': '#E62A2A', 'color': '#FFFFFF', 'border-radius': '20px', 'padding': '0px 6px 0px 6px'} : {}">
+              <span
+                *ngIf="item.iconhead"
+                nz-icon
+                [nzType]="item.value === valueDefault ? (item.selectedIcon || item.iconhead) : item.iconhead"
+                [style]="item.styleIcon"
+                nzTheme="outline">
+              </span>
+              <span
+                  [class.text-collapse-btn]="item.iconhead"
+                  *ngIf="item.name"
+                  style="padding: 0 5px; flex-shrink: 0;">
+                  {{item.name ? item.name : ''}}
+              </span>
+              <span *ngIf="item.count">({{item.count}})</span>
+              <span
+                style="margin-top: 2px;"
+                *ngIf="item.icon && !item.iconhead"
+                nz-icon
+                [nzType]="item.value === valueDefault ? (item.selectedIcon || item.icon) : item.icon"
+                [style]="item.styleIcon"
+                nzTheme="outline">
+              </span>
+          </div>
+      </label>
+  </nz-radio-group>
+</div>

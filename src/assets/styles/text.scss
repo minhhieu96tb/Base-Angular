@@ -1,0 +1,57 @@
+@import "./color.scss";
+.normal-text {
+  font-weight: 400;
+}
+.bold-text {
+  font-weight: 500;
+}
+.bold-large-text {
+  font-weight: 600;
+}
+.bold-big-text {
+  font-weight: 700;
+}
+.sm-size {
+  font-size: 12px;
+}
+.normal-size {
+  font-size: 14px;
+}
+.md-size {
+  font-size: 16px;
+}
+.lg-size {
+  font-size: 18px !important;
+}
+.xl-size {
+  font-size: 20px !important;
+}
+.xxl-size {
+  font-size: 24px !important;
+}
+.header-size {
+  font-size: 36px !important;
+}
+.text-wrap-custom {
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-none {
+  text-decoration: none;
+}
+.text-second {
+    color: $colorTextSubTitle !important;
+}

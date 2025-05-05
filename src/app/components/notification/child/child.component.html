@@ -1,0 +1,36 @@
+<div class="container-notification" [ngClass]="notification.level" (mouseenter)="pause()" (mouseleave)="unPause()">
+	<!-- <div *ngIf="notification.options.timeout" class="progress" [style.width]="(notification.obs.remainingPercent | async)+'%'"></div> -->
+	<div class="content-notification">
+		<span
+			*ngIf="notification.level == 'success'" 
+			nz-icon
+			nzType="ng-zorro:success_noti_icon"
+			style="font-size: 24px !important;">
+		</span>
+		<span
+			*ngIf="notification.level == 'warning'" 
+			nz-icon
+			nzType="ng-zorro:warning_noti"
+			style="font-size: 24px !important;">
+		</span>
+		<span
+			*ngIf="notification.level == 'error'" 
+			nz-icon
+			nzType="ng-zorro:error_noti_icon"
+			style="font-size: 24px !important;">
+		</span>
+		<span
+			*ngIf="notification.level == 'info'" 
+			nz-icon
+			nzType="ng-zorro:info_noti_icon"
+			style="font-size: 24px !important;">
+		</span>
+		<div class="">
+			<div class="title-notification"> {{notification.title}}</div>
+			<div class="content-text-notification"> {{notification.text}} </div>
+		</div>
+	</div>
+	<div class="close-icon-notification">
+		<span (click)="remove()" nz-icon nzType="close" nzTheme="outline"></span>
+	</div>
+</div>
